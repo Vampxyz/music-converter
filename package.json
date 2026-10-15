@@ -1,0 +1,22 @@
+{
+  "name": "music-converter",
+  "version": "1.0.0",
+  "description": "YouTube music converter web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "youtube",
+    "mp3",
+    "converter",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "youtube-dl-exec": "^3.1.0"
+  }
+}

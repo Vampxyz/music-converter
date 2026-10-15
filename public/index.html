@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Music Converter</h1>
+        <p>
+          Convert YouTube videos or playlists to MP3 and save them to the
+          destination you choose.
+        </p>
+      </header>
+
+      <main class="card">
+        <div class="input-group">
+          <label for="destinationInput">Download folder</label>
+          <div class="destination-row">
+            <input
+              id="destinationInput"
+              type="text"
+              placeholder="C:\\Users\\YourName\\Downloads\\MusicConverter"
+            />
+            <button
+              id="browseFolderButton"
+              type="button"
+              class="secondary-button"
+            >
+              Choose folder
+            </button>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="urlInput">YouTube link</label>
+          <input
+            id="urlInput"
+            type="text"
+            placeholder="https://www.youtube.com/watch?v=..."
+          />
+        </div>
+
+        <div class="options">
+          <label class="option-item">
+            <input type="radio" name="type" value="single" checked />
+            <span>Single video</span>
+          </label>
+          <label class="option-item">
+            <input type="radio" name="type" value="playlist" />
+            <span>Playlist</span>
+          </label>
+        </div>
+
+        <button id="convertButton" type="button">Convert to MP3</button>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <div id="result" class="result hidden">
+          <h2>Download summary</h2>
+          <ul id="resultList"></ul>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
